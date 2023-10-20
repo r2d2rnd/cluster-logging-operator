@@ -75,9 +75,9 @@ func ID(o runtime.Object) string {
 
 // GroupVersionKind deduces the Kind from the Go type.
 func GroupVersionKind(o runtime.Object) schema.GroupVersionKind {
-	gvk, err := apiutil.GVKForObject(o, scheme.Scheme)
+	gvks, _, err := scheme.Scheme.ObjectKinds(o)
 	must(err)
-	return gvk
+	return gvks[0]
 }
 
 // Labels returns the labels map for object, guaratneed to be non-nil.

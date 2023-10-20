@@ -1,0 +1,8 @@
+go 1.20
+
+use (
+	.
+	// FIXME temporarily separating the clusterinfo module to resolve version conflicts.
+	// See ./internal/clusterinfo/go.mod
+	./internal/clusterinfo
+)
