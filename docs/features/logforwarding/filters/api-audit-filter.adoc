@@ -106,7 +106,7 @@ This resource is different to the ClusterLogForwarder filter, and less flexible.
 For more details see https://docs.openshift.com/container-platform/latest/security/audit-log-policy-config.html
 
 The OCP policy only allows control of events by `group`
-It does not allow you to distinguish events by `verb`, which is important to separate more importnat "update" events from less important "read only" events.
+It does not allow you to distinguish events by `verb`, which is important to separate more important "update" events from less important "read only" events.
 
 The ClusterLogForwarder filter provides control by verb, user, group, namespace, resource and more.
 
